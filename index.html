@@ -6,220 +6,149 @@
 <meta name="description" content="David Ming — Mechanical Engineering student at UMass Amherst. CAD, prototyping, and robotics."/>
 <title>David Ming — Mechanical Engineer</title>
 <link rel="stylesheet" href="style.css"/>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
 </head>
 <body>
-<div class="page">
 
-  <!-- TITLE BLOCK -->
-  <header class="title-block">
-    <div class="tb-name">
-      <h1>David Ming</h1>
-    </div>
-    <div class="tb-meta">
-      <div class="tb-cell">
-        <span class="tb-label">Role</span>
-        <span class="tb-value">Mechanical engineering student</span>
-      </div>
-      <div class="tb-cell">
-        <span class="tb-label">School</span>
-        <span class="tb-value">UMass Amherst</span>
-      </div>
-      <div class="tb-cell">
-        <span class="tb-label">Sheet</span>
-        <span class="tb-value" id="sheet-indicator">01 / 04</span>
-      </div>
-    </div>
-  </header>
-
-  <!-- TABS -->
+<header class="navbar">
+  <div class="brand">David Ming</div>
   <nav class="tabs" role="tablist" aria-label="Site sections">
     <button role="tab" aria-selected="true" aria-controls="home" id="tab-home" class="tab active" data-tab="home">Home</button>
-    <button role="tab" aria-selected="false" aria-controls="about" id="tab-about" class="tab" data-tab="about">About</button>
+    <button role="tab" aria-selected="false" aria-controls="about" id="tab-about" class="tab" data-tab="about">About Me</button>
     <button role="tab" aria-selected="false" aria-controls="projects" id="tab-projects" class="tab" data-tab="projects">Projects</button>
     <button role="tab" aria-selected="false" aria-controls="resume" id="tab-resume" class="tab" data-tab="resume">Resume</button>
   </nav>
+</header>
 
-  <main class="sheet">
-    <span class="corner tl" aria-hidden="true"></span>
-    <span class="corner tr" aria-hidden="true"></span>
-    <span class="corner bl" aria-hidden="true"></span>
-    <span class="corner br" aria-hidden="true"></span>
+<div class="layout">
+
+  <aside class="sidebar">
+    <div class="avatar">DM</div>
+    <div class="sidebar-name">David Ming</div>
+
+    <div class="sidebar-block">
+      <div class="sidebar-label">Bio</div>
+      <p class="sidebar-text">
+        Mechanical engineering student focused on CAD, prototyping, and
+        hands-on robotics. I like turning a design into a working part.
+      </p>
+    </div>
+
+    <div class="sidebar-block">
+      <div class="sidebar-label">Contact</div>
+      <ul class="contact-list">
+        <li>
+          <a href="tel:9785013858">
+            <span class="contact-icon">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.68 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.32 1.85.55 2.81.68A2 2 0 0 1 22 16.92z"/></svg>
+            </span>
+            978-501-3858
+          </a>
+        </li>
+        <li>
+          <a href="mailto:dhming@umass.edu">
+            <span class="contact-icon">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>
+            </span>
+            dhming@umass.edu
+          </a>
+        </li>
+        <li>
+          <a href="mailto:davidming1161@gmail.com">
+            <span class="contact-icon">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>
+            </span>
+            davidming1161@gmail.com
+          </a>
+        </li>
+      </ul>
+    </div>
+  </aside>
+
+  <main class="content">
 
     <!-- HOME -->
     <section id="home" role="tabpanel" aria-labelledby="tab-home" class="panel active">
-      <div class="hero">
-        <p class="intro">
-          I like taking a design from a sketch to a working part — in CAD,
-          in a mold, or on a bench. Currently studying mechanical engineering
-          at UMass Amherst, with hands-on time in injection molding, prototyping,
-          and building things like a custom robotic arm.
-        </p>
-        <svg class="hero-svg" viewBox="0 0 240 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <rect class="draw" x="90" y="168" width="60" height="14" />
-          <line class="draw" x1="120" y1="168" x2="120" y2="130" />
-          <circle class="joint" cx="120" cy="130" r="6" />
-          <line class="draw" x1="120" y1="130" x2="172" y2="92" />
-          <circle class="joint" cx="172" cy="92" r="6" />
-          <line class="draw" x1="172" y1="92" x2="150" y2="42" />
-          <circle class="joint" cx="150" cy="42" r="6" />
-          <line class="draw" x1="150" y1="42" x2="138" y2="20" />
-          <line class="draw" x1="150" y1="42" x2="164" y2="22" />
-        </svg>
-      </div>
-      <ul class="contact-list">
-        <li><a href="tel:9785013858">978-501-3858</a></li>
-        <li><a href="mailto:dhming@umass.edu">dhming@umass.edu</a></li>
-        <li><a href="mailto:davidming1161@gmail.com">davidming1161@gmail.com</a></li>
-      </ul>
+      <h1>Welcome</h1>
+      <p>
+        I like taking a design from a sketch to a working part — in CAD,
+        in a mold, or on a bench. Currently studying mechanical engineering
+        at UMass Amherst, with hands-on time in injection molding, prototyping,
+        and building things like a custom robotic arm.
+      </p>
     </section>
 
     <!-- ABOUT -->
     <section id="about" role="tabpanel" aria-labelledby="tab-about" class="panel" hidden>
+      <h1>About Me</h1>
       <p>
         I'm a mechanical engineering student at the University of Massachusetts
         Amherst. My work spans CAD design, prototyping, and manufacturing —
         from analyzing injection molding flow simulations during an internship
-        in Shenzhen to designing and building projects on my own, like a
-        multi-joint robotic arm and an FPV drone.
+        in Shenzhen to designing and building projects on my own.
       </p>
-
-      <div class="block">
-        <h2>Education</h2>
-        <div class="row">
-          <div>
-            <div class="row-title">B.S. Mechanical Engineering</div>
-            <div class="row-sub">University of Massachusetts Amherst</div>
-          </div>
-          <div class="row-date">2024 – 2028 · Amherst, MA</div>
-        </div>
-      </div>
-
-      <div class="block">
-        <h2>Skills</h2>
-        <div class="skills">
-          <div>
-            <div class="skills-label">Programming</div>
-            <div class="tags">
-              <span class="tag">Python</span>
-            </div>
-          </div>
-          <div>
-            <div class="skills-label">Tools &amp; software</div>
-            <div class="tags">
-              <span class="tag">SolidWorks</span>
-              <span class="tag">OnShape</span>
-              <span class="tag">MATLAB</span>
-              <span class="tag">PrusaSlicer</span>
-              <span class="tag">Moldex3D</span>
-              <span class="tag">Ansys</span>
-            </div>
-          </div>
-        </div>
-      </div>
+      <p>My experience spans a few areas:</p>
+      <ul>
+        <li><strong>Design &amp; prototyping:</strong> CAD modeling in SolidWorks and OnShape, plus rapid prototyping with 3D printing.</li>
+        <li><strong>Manufacturing &amp; simulation:</strong> Injection molding flow analysis in Moldex3D and structural analysis in Ansys.</li>
+        <li><strong>Robotics &amp; controls:</strong> Designing and building a custom multi-joint robotic arm, from mechanics to control software.</li>
+        <li><strong>Computation:</strong> MATLAB and Python for engineering analysis.</li>
+      </ul>
+      <p>I'm pursuing my B.S. in Mechanical Engineering at UMass Amherst, 2024–2028.</p>
     </section>
 
     <!-- PROJECTS -->
     <section id="projects" role="tabpanel" aria-labelledby="tab-projects" class="panel" hidden>
+      <h1>Projects</h1>
 
-      <div class="project">
-        <svg class="proj-svg" viewBox="0 0 240 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <rect class="draw" x="90" y="168" width="60" height="14" />
-          <line class="draw" x1="120" y1="168" x2="120" y2="130" />
-          <circle class="joint" cx="120" cy="130" r="6" />
-          <line class="draw" x1="120" y1="130" x2="172" y2="92" />
-          <circle class="joint" cx="172" cy="92" r="6" />
-          <line class="draw" x1="172" y1="92" x2="150" y2="42" />
-          <circle class="joint" cx="150" cy="42" r="6" />
-          <line class="draw" x1="150" y1="42" x2="138" y2="20" />
-          <line class="draw" x1="150" y1="42" x2="164" y2="22" />
-        </svg>
-        <div class="project-body">
-          <div class="row">
-            <h2>Robotic Arm</h2>
-            <div class="row-date">2026 – Present</div>
-          </div>
-          <ul>
-            <li>Designing a fully custom multi-joint robotic arm from scratch using CAD.</li>
-            <li>Developing control software to manage joint movement and motion sequencing.</li>
-            <li>Integrating a camera module with computer vision for object detection and interaction.</li>
-          </ul>
-        </div>
+      <div class="entry">
+        <h2>Robotic Arm</h2>
+        <div class="entry-date">2026 – Present</div>
+        <ul>
+          <li>Designing a fully custom multi-joint robotic arm from scratch using CAD.</li>
+          <li>Developing control software to manage joint movement and motion sequencing.</li>
+          <li>Integrating a camera module with computer vision for object detection and interaction.</li>
+        </ul>
       </div>
 
-      <div class="project">
-        <svg class="proj-svg" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <rect class="draw" x="86" y="86" width="28" height="28" />
-          <line class="draw" x1="100" y1="100" x2="42" y2="42" />
-          <line class="draw" x1="100" y1="100" x2="158" y2="42" />
-          <line class="draw" x1="100" y1="100" x2="42" y2="158" />
-          <line class="draw" x1="100" y1="100" x2="158" y2="158" />
-          <circle class="joint" cx="42" cy="42" r="10" />
-          <circle class="joint" cx="158" cy="42" r="10" />
-          <circle class="joint" cx="42" cy="158" r="10" />
-          <circle class="joint" cx="158" cy="158" r="10" />
-        </svg>
-        <div class="project-body">
-          <div class="row">
-            <h2>FPV Drone</h2>
-            <div class="row-date">2023</div>
-          </div>
-          <ul>
-            <li>Assembled a fully functional FPV drone from frame, flight controller, motors, and propellers.</li>
-            <li>Wired and soldered electrical components, ensuring clean and reliable connections.</li>
-            <li>Designed and 3D printed custom parts for proper fit and integration between components.</li>
-          </ul>
-        </div>
+      <div class="entry">
+        <h2>FPV Drone</h2>
+        <div class="entry-date">2023</div>
+        <ul>
+          <li>Assembled a fully functional FPV drone from frame, flight controller, motors, and propellers.</li>
+          <li>Wired and soldered electrical components, ensuring clean and reliable connections.</li>
+          <li>Designed and 3D printed custom parts for proper fit and integration between components.</li>
+        </ul>
       </div>
-
     </section>
 
     <!-- RESUME -->
     <section id="resume" role="tabpanel" aria-labelledby="tab-resume" class="panel" hidden>
-      <div class="resume-head">
-        <p>Full resume as a PDF, or the highlights below.</p>
-        <a class="download" href="Resume_2026_2027.pdf" download>
-          <svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true">
-            <path d="M7 1v8M3.5 6.5 7 10l3.5-3.5M1.5 12.5h11" stroke="currentColor" stroke-width="1.3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-          Download PDF
-        </a>
-      </div>
+      <h1>Resume</h1>
+      <p>Full resume as a PDF, or the highlights below.</p>
+      <a class="download-btn" href="Resume_2026_2027.pdf" download>Download PDF</a>
 
       <div class="pdf-frame">
         <iframe src="Resume_2026_2027.pdf" title="David Ming resume PDF"></iframe>
       </div>
 
-      <div class="block">
-        <h2>Experience</h2>
-        <div class="project no-svg">
-          <div class="project-body">
-            <div class="row">
-              <div>
-                <div class="row-title">BSC Technology</div>
-                <div class="row-sub">Mechanical Engineering Intern · Shenzhen, China</div>
-              </div>
-              <div class="row-date">Dec 2024 – Jan 2025</div>
-            </div>
-            <ul>
-              <li>Developed 3D models and contributed to prototyping, translating design concepts into product iterations.</li>
-              <li>Hands-on factory floor experience in an injection molding and assembly environment.</li>
-              <li>Analyzed injection molding flow simulations to evaluate manufacturability and recommend design changes.</li>
-              <li>Reviewed BOMs and prepared DFM documentation to communicate design feedback to clients.</li>
-            </ul>
-          </div>
-        </div>
+      <h2>Experience</h2>
+      <div class="entry">
+        <h3>BSC Technology</h3>
+        <div class="entry-date">Mechanical Engineering Intern · Shenzhen, China · Dec 2024 – Jan 2025</div>
+        <ul>
+          <li>Developed 3D models and contributed to prototyping, translating design concepts into product iterations.</li>
+          <li>Hands-on factory floor experience in an injection molding and assembly environment.</li>
+          <li>Analyzed injection molding flow simulations to evaluate manufacturability and recommend design changes.</li>
+          <li>Reviewed BOMs and prepared DFM documentation to communicate design feedback to clients.</li>
+        </ul>
       </div>
     </section>
 
   </main>
 
-  <footer>
-    <span>David Ming</span>
-    <span>Open to opportunities</span>
-  </footer>
-
 </div>
+
 <script src="script.js"></script>
 </body>
 </html>
