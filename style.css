@@ -9,6 +9,8 @@
 :root {
   --bg: #1b1b1b;
   --bg-nav: #0e0e0e;
+  --card: #232323;
+  --card-hover: #2a2a2a;
   --text: #cfcfcf;
   --heading: #ffffff;
   --muted: #8f8f8f;
@@ -175,11 +177,6 @@ a {
   margin-bottom: 4px;
 }
 
-.content h3 {
-  font-size: 16px;
-  margin-bottom: 4px;
-}
-
 .content p {
   max-width: 65ch;
   margin-bottom: 18px;
@@ -204,15 +201,91 @@ a {
   display: none;
 }
 
-/* ── Projects / experience entries ── */
-.entry {
-  margin-bottom: 32px;
-}
-
 .entry-date {
   font-size: 13px;
   color: var(--muted);
   margin-bottom: 12px;
+}
+
+/* ── Project tiles ── */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.project-tile {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  text-align: left;
+  background: var(--card);
+  border: none;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  font: inherit;
+  color: inherit;
+  padding: 0;
+  transition: background 0.15s ease;
+}
+
+.project-tile:hover,
+.project-tile:focus-visible {
+  background: var(--card-hover);
+  outline: none;
+}
+
+.tile-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 120px;
+  background: var(--icon-bg);
+  color: var(--muted);
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: 0.04em;
+}
+
+.tile-body {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 18px 20px 22px;
+}
+
+.tile-title {
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--heading);
+}
+
+.tile-desc {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+/* ── Project detail view ── */
+.back-link {
+  display: inline-block;
+  background: none;
+  border: none;
+  color: var(--muted);
+  font: inherit;
+  font-size: 14px;
+  cursor: pointer;
+  margin-bottom: 24px;
+  padding: 0;
+}
+
+.back-link:hover {
+  color: var(--heading);
+}
+
+.detail-panel[hidden] {
+  display: none;
 }
 
 /* ── Resume ── */
@@ -234,7 +307,7 @@ a {
 
 .pdf-frame {
   border: 1px solid var(--border);
-  height: 560px;
+  height: 640px;
   margin-bottom: 40px;
 }
 
@@ -262,6 +335,10 @@ a {
     grid-template-columns: 1fr;
     padding: 40px 24px 80px;
     gap: 40px;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
   }
 
   .pdf-frame {
