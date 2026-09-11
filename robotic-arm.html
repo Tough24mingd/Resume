@@ -31,10 +31,14 @@
     The first version was a single-joint test rig, built to practice wiring
     and control code before committing to the full arm. It ran on standard
     hobby servos driven by an Arduino, controlled directly from the Serial
-    Monitor — typing a joint letter and an angle (for example, <code>b90</code>
+    Monitor, typing a joint letter and an angle (for example, <code>b90</code>
     to send the base to 90°) moved that joint to the given position.
   </p>
   <img class="detail-photo" src="robotic-arm-1.jpg" alt="V1 test rig servo wired to a breadboard"/>
+
+  <p> 
+    Code for the V1:
+  </p>  
   <p><a class="download-btn" href="4DOF_RoboticArm.ino" download>Download V1 code (.ino)</a></p>
 
   <h2>V2 — ESP32 and Bluetooth control</h2>
@@ -50,6 +54,9 @@
     <li>A controller bumper arms and disarms movement, so the arm stays still until you mean to move it.</li>
   </ul>
   <img class="detail-photo" src="robotic-arm-3.jpg" alt="V2 arm joints close up"/>
+  <p>
+    Code for V2:
+  </p>  
   <p><a class="download-btn" href="xbox_arm_control.ino" download>Download V2 code (.ino)</a></p>
 </div>
 
