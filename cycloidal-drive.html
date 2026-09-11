@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Cycloidal Drive — David Ming</title>
+<link rel="stylesheet" href="style.css"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+<header class="navbar">
+  <div class="brand">David Ming</div>
+  <a class="nav-link" href="index.html#projects">&larr; Back to Projects</a>
+</header>
+
+<div class="project-page">
+  <h1>Cycloidal Drive</h1>
+  <p class="tagline">A 20:1 reduction cycloidal drive, built for higher torque than standard servo gearing.</p>
+
+  <img class="hero-image" src="cycloidal-drive-1.jpg" alt="Cycloidal disc with output roller pins around its edge and an eccentric bearing at center"/>
+
+  <div class="tags">
+    <span class="tag">Reduction: 20:1</span>
+    <span class="tag">Status: ~90% complete</span>
+    <span class="tag">Rollers: 686-2RS bearings</span>
+    <span class="tag">CAD: SolidWorks</span>
+  </div>
+
+  <h2>Why a cycloidal drive</h2>
+  <p>
+    After finishing work on the robotic arm, I wanted to build something
+    that could handle higher torque than standard servo gearing allows.
+    A cycloidal drive trades speed for a large step up in torque, with very
+    little backlash — a good next step from what I'd learned building the arm.
+  </p>
+
+  <h2>Design</h2>
+  <p>
+    The drive uses the howtomechatronics.com DIY cycloidal drive design as a
+    starting reference — a PLA disc riding on 686-2RS ball bearing rollers —
+    scaled up from that tutorial's 16 pins to reach a 20:1 reduction ratio.
+    Every part is modeled in SolidWorks.
+  </p>
+  <ul>
+    <li>Ring gear rollers are 686-2RS ball bearings, 13mm OD / 6mm ID.</li>
+    <li>Output holes on the disc are sized at 16mm — a 13mm output bearing plus a 2×1.5mm eccentricity offset.</li>
+  </ul>
+  <img class="detail-photo" src="cycloidal-drive-2.png" alt="SolidWorks assembly of the cycloidal disc and outer housing with roller pins"/>
+
+  <h2>Status</h2>
+  <p>
+    Currently about 90% complete. The design work remaining is adding the
+    second disc — cycloidal drives typically run two discs, offset in phase,
+    to balance the load.
+  </p>
+</div>
+
+</body>
+</html>
