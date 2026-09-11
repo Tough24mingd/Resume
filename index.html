@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="description" content="David Ming — Mechanical Engineering student at UMass Amherst. CAD, prototyping, and robotics."/>
+<title>David Ming — Mechanical Engineer</title>
+<link rel="stylesheet" href="style.css"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+<header class="navbar">
+  <div class="brand">David Ming</div>
+  <nav class="tabs" role="tablist" aria-label="Site sections">
+    <button role="tab" aria-selected="true" aria-controls="about" id="tab-about" class="tab active" data-tab="about">About Me</button>
+    <button role="tab" aria-selected="false" aria-controls="projects" id="tab-projects" class="tab" data-tab="projects">Projects</button>
+    <button role="tab" aria-selected="false" aria-controls="resume" id="tab-resume" class="tab" data-tab="resume">Resume</button>
+  </nav>
+</header>
+
+<div class="layout">
+
+  <aside class="sidebar">
+    <div class="avatar">DM</div>
+    <div class="sidebar-name">David Ming</div>
+
+    <div class="sidebar-block">
+      <div class="sidebar-label">Bio</div>
+      <p class="sidebar-text">
+        Mechanical engineering student focused on CAD, prototyping, and
+        hands-on robotics.
+      </p>
+    </div>
+
+    <div class="sidebar-block">
+      <div class="sidebar-label">Contact &amp; Link</div>
+      <ul class="contact-list">
+        <li>
+          <a href="tel:9785013858">
+            <span class="contact-icon">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.68 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.32 1.85.55 2.81.68A2 2 0 0 1 22 16.92z"/></svg>
+            </span>
+            978-501-3858
+          </a>
+        </li>
+        <li>
+          <a href="mailto:dhming@umass.edu">
+            <span class="contact-icon">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>
+            </span>
+            dhming@umass.edu
+          </a>
+        </li>
+        <li>
+          <a href="mailto:davidming1161@gmail.com">
+            <span class="contact-icon">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>
+            </span>
+            davidming1161@gmail.com
+          </a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/david-ming-b47156244/" target="_blank" rel="noopener noreferrer">
+            <span class="contact-icon">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </span>
+            LinkedIn
+          </a>
+        </li>
+      </ul>
+    </div>
+  </aside>
+
+  <main class="content">
+
+    <!-- ABOUT -->
+    <section id="about" role="tabpanel" aria-labelledby="tab-about" class="panel active">
+      <h1>About Me</h1>
+      <p>
+        I'm a mechanical engineering student at the University of Massachusetts
+        Amherst. My work spans CAD design, prototyping, and manufacturing.
+      </p>
+      <p>My experience spans a few areas:</p>
+      <ul>
+        <li><strong>Design &amp; prototyping:</strong> CAD modeling in SolidWorks and OnShape, plus rapid prototyping with 3D printing.</li>
+        <li><strong>Manufacturing &amp; simulation:</strong> Injection molding flow analysis in Moldex3D and structural analysis in Ansys.</li>
+        <li><strong>Robotics &amp; controls:</strong> Designing and building a custom multi-joint robotic arm, from mechanics to control software.</li>
+        <li><strong>Computation:</strong> MATLAB and Python for engineering analysis.</li>
+      </ul>
+      <p>I'm pursuing my B.S. in Mechanical Engineering at UMass Amherst, 2024–2028.</p>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" role="tabpanel" aria-labelledby="tab-projects" class="panel" hidden>
+      <h1>Projects</h1>
+
+      <div class="project-grid" id="project-grid">
+        <a class="project-tile" href="robotic-arm.html">
+          <div class="tile-image">RA</div>
+          <div class="tile-body">
+            <div class="tile-title">Robotic Arm</div>
+            <div class="tile-desc">A fully custom multi-joint robotic arm, designed from scratch in CAD and driven by embedded control software.</div>
+          </div>
+        </a>
+
+        <a class="project-tile" href="fpv-drone.html">
+          <div class="tile-image">FPV</div>
+          <div class="tile-body">
+            <div class="tile-title">FPV Drone</div>
+            <div class="tile-desc">A fully assembled FPV drone, built up from frame, flight controller, motors, and custom 3D-printed parts.</div>
+          </div>
+        </a>
+
+        <a class="project-tile" href="cycloidal-drive.html">
+          <div class="tile-image">CD</div>
+          <div class="tile-body">
+            <div class="tile-title">Cycloidal Drive</div>
+            <div class="tile-desc">A custom 20:1 reduction cycloidal drive, designed for compact, high-torque, low-backlash motion.</div>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- RESUME -->
+    <section id="resume" role="tabpanel" aria-labelledby="tab-resume" class="panel" hidden>
+      <h1>Resume</h1>
+      <p>Scroll through it below, or download your own copy.</p>
+      <a class="download-btn" href="Resume_2026_2027.pdf" download>Download PDF</a>
+
+      <div class="pdf-frame">
+        <iframe src="Resume_2026_2027.pdf" title="David Ming resume PDF">
+          <p>Your browser doesn't support embedded PDFs. <a href="Resume_2026_2027.pdf">Download the resume PDF</a> instead.</p>
+        </iframe>
+      </div>
+    </section>
+
+  </main>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

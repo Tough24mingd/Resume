@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Robotic Arm — David Ming</title>
+<link rel="stylesheet" href="style.css"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+<header class="navbar">
+  <div class="brand">David Ming</div>
+  <a class="nav-link" href="index.html#projects">&larr; Back to Projects</a>
+</header>
+
+<div class="project-page">
+  <h1>Robotic Arm</h1>
+  <p class="tagline">From an Arduino test rig to an ESP32 arm controlled with an Xbox controller.</p>
+
+  <img class="hero-image" src="robotic-arm-2.jpg" alt="V2 robotic arm next to an Xbox controller and ESP32 breadboard"/>
+
+  <div class="tags">
+    <span class="tag">Started: 2026</span>
+    <span class="tag">Status: In progress</span>
+    <span class="tag">Servos: STS3215 (V2)</span>
+    <span class="tag">CAD: SolidWorks</span>
+  </div>
+
+  <h2>Design</h2>
+  <p>
+    Every part of the arm was modeled in SolidWorks before anything was
+    printed or assembled — working out joint clearances, mounting points,
+    and how each link would connect to the next.
+  </p>
+  <div class="detail-photo-grid">
+    <figure>
+      <img src="robotic-arm-cad-1.png" alt="SolidWorks assembly of the robotic arm, folded"/>
+    </figure>
+    <figure>
+      <img src="robotic-arm-cad-2.png" alt="SolidWorks assembly of the robotic arm, extended"/>
+    </figure>
+  </div>
+
+  <h2>V1 — learning the wiring and control</h2>
+  <p>
+    The first version was a single-joint test rig, built to practice wiring
+    and control code before committing to the full arm. It ran on standard
+    hobby servos driven by an Arduino, controlled directly from the Serial
+    Monitor — typing a joint letter and an angle (for example, <code>b90</code>
+    to send the base to 90°) moved that joint to the given position.
+  </p>
+  <img class="detail-photo" src="robotic-arm-1.jpg" alt="V1 test rig servo wired to a breadboard"/>
+  <p><a class="download-btn" href="4DOF_RoboticArm.ino" download>Download V1 code (.ino)</a></p>
+
+  <h2>V2 — ESP32 and Bluetooth control</h2>
+  <p>
+    The second version moved to a full multi-joint arm built around STS3215
+    bus servos, controlled from an ESP32 over Bluetooth using an Xbox
+    controller. The sticks and triggers map to each joint, with a few
+    safeguards built into the control code:
+  </p>
+  <ul>
+    <li>Every joint has software position limits, so the arm can't drive itself into its own frame.</li>
+    <li>On boot, every joint moves to a known home position before accepting any input.</li>
+    <li>A controller bumper arms and disarms movement, so the arm stays still until you mean to move it.</li>
+  </ul>
+  <img class="detail-photo" src="robotic-arm-3.jpg" alt="V2 arm joints close up"/>
+  <p><a class="download-btn" href="xbox_arm_control.ino" download>Download V2 code (.ino)</a></p>
+
+  <h2>Prototyping</h2>
+  <p>
+    Getting the joint housings right took a few print iterations — dialing
+    in tolerances and mounting points before arriving at the parts used in
+    the final build.
+  </p>
+  <img class="detail-photo" src="robotic-arm-4.jpg" alt="Several printed prototype iterations of the arm's joint housings"/>
+</div>
+
+</body>
+</html>
