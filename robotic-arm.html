@@ -16,16 +16,6 @@
 
 <div class="project-page">
   <h1>Robotic Arm</h1>
-  <p class="tagline">From an Arduino test rig to an ESP32 arm controlled with an Xbox controller.</p>
-
-  <img class="hero-image" src="robotic-arm-2.jpg" alt="V2 robotic arm next to an Xbox controller and ESP32 breadboard"/>
-
-  <div class="tags">
-    <span class="tag">Started: 2026</span>
-    <span class="tag">Status: In progress</span>
-    <span class="tag">Servos: STS3215 (V2)</span>
-    <span class="tag">CAD: SolidWorks</span>
-  </div>
 
   <h2>Design</h2>
   <p>
@@ -54,17 +44,26 @@
   <p><a class="download-btn" href="4DOF_RoboticArm.ino" download>Download V1 code (.ino)</a></p>
 
   <h2>V2 — ESP32 and Bluetooth control</h2>
+
+  <img class="hero-image" src="robotic-arm-2.jpg" alt="V2 robotic arm next to an Xbox controller and ESP32 breadboard"/>
+
+  
   <p>
     The second version moved to a full multi-joint arm built around STS3215
     bus servos, controlled from an ESP32 over Bluetooth using an Xbox
     controller. The sticks and triggers map to each joint, with a few
     safeguards built into the control code:
   </p>
+
+
+
+  
   <ul>
     <li>Every joint has software position limits, so the arm can't drive itself into its own frame.</li>
     <li>On boot, every joint moves to a known home position before accepting any input.</li>
     <li>A controller bumper arms and disarms movement, so the arm stays still until you mean to move it.</li>
   </ul>
+  
   <img class="detail-photo" src="robotic-arm-3.jpg" alt="V2 arm joints close up"/>
   <p><a class="download-btn" href="xbox_arm_control.ino" download>Download V2 code (.ino)</a></p>
 
